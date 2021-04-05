@@ -1,0 +1,70 @@
+.goods-list {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0 .32rem;
+}
+
+.calculate {
+  position: absolute;
+  right: -.2rem;
+  bottom: 0;
+  width: 2rem;
+}
+
+.decrement, .increment {
+  position: relative;
+  width: .6rem;
+  height: .6rem;
+  border-radius: 50%;
+}
+
+.decrement {
+  float: left;
+  font-size: .6rem;
+  color: #201d1d;
+  background: #dadada;
+}
+
+.decrement::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: .3rem;
+  height: .05rem;
+  background: #201d1d;
+}
+
+.increment::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: .3rem;
+  height: .05rem;
+  background: #fff;
+}
+
+.increment::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: .05rem;
+  height: .3rem;
+  background: #fff;
+}
+
+.increment {
+  float: right;
+  font-size: .4rem;
+  color: #fff;
+  background: var(--theme-font-color);
+}
+
+

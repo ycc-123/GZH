@@ -1,0 +1,170 @@
+.orderDetail{
+  padding: 0 .32rem;
+  margin-top: .2rem;
+  color: #474747;
+}
+.detailGoodsStatus{
+  height: 1.6266rem;
+  background-color: white;
+  border-radius: .133rem;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center; 
+}
+
+.detailGoodsStatus>div{
+  padding: 0 .42rem;
+}
+
+.statusText{
+  color: var(--theme-font-color);
+  font-weight: bold;
+  font-size: .4rem;
+
+}
+
+.d-goods-title {
+  overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.statusAction{
+
+}
+
+/* --------- */
+
+.orderDetailGoods{
+  height:2.94666rem;
+  background-color: white;
+  border-radius: .133rem;
+  margin-top: .2rem; 
+}
+
+/* -------- */
+
+.orderDetailAddress{
+  height: 2.16rem;
+  background-color: white;
+  border-radius: .133rem;
+  margin-top: .2rem; 
+}
+
+.orderDetailAddress>div{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: .2rem .42rem;
+}
+
+.orderDetailAddress>div>p{
+  line-height: .5rem;
+}
+.addressTop{
+  padding: .18rem 0;
+  font-weight: bold;
+}
+
+.addressInfo{
+  font-weight: lighter;
+}
+
+
+/* ------- */
+.orderDetailDeliveryTime{
+  background-color: white;
+  border-radius: .133rem;
+  margin-top: .2rem; 
+  height: 1.11rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.orderDetailDeliveryTime>p{
+    padding: 0 .42rem;
+
+}
+
+
+/* ------- */
+
+.orderDetailAmount{
+  height: 3.2rem;
+  background-color: white;
+  border-radius: .133rem;
+  margin-top: .2rem; 
+}
+.orderDetailAmount>div{
+  /* width: 100%; */
+  display: flex;
+  flex-direction: row;
+  /* align-items: center; */
+  justify-content: space-between;
+}
+
+.orderDetailAmount>div>p{
+  padding: .15rem .42rem;
+}
+
+.totalPrice{
+  font-size: .4rem;
+  color: var(--theme-font-color);
+  /* 212735 */
+}
+
+/* ---------- */
+.orderDetailOrderNumber{
+  /* height: 2.48rem; */
+  background-color: white;
+  border-radius: .133rem;
+  margin-top: .2rem;
+  display: flex;
+  flex-direction: row; 
+}
+
+.orderDetailOrderNumber>div{
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
+
+}
+
+.orderDetailOrderNumber>div>p{
+  padding: .15rem .42rem;
+
+}
+
+
+.orderDetailOption{
+  padding: 0 0;
+  margin-top:.44rem;
+  height: 1.3rem;
+  background-color: white;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.orderDetailOption>div{
+  width: 1.9rem;
+  height: 0.77rem;
+  line-height: .77rem;
+  text-align: center;
+  border-radius: 0.3rem;
+  border: .027rem solid #474747 ;
+}
+
+
+
+
+
+
+
+

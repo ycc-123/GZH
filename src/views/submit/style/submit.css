@@ -1,0 +1,61 @@
+
+/* 配送方式 */
+
+.submit {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: var(--bg-color);
+}
+
+.submit-info {
+  overflow: hidden;
+  height: 1.19rem;
+  border-radius: .13rem;
+  background: #fff;
+  
+}
+
+.submit-nav {
+  display: flex;
+  height: 100%;
+}
+.submit-nav li {
+  flex: 1;
+  text-align: center;
+  line-height: 1.19rem;
+  font-size: .32rem;
+}
+
+.submit-nav li:nth-child(2) {
+  border-left: .03rem solid #ccc;
+  border-right: .03rem solid #ccc;
+}
+
+.nav-active {
+  background: var(--theme-font-color);
+  color: #fff;
+}
+
+/* 信息 */
+
+
+
+/* 提交底部 */
+
+
+
+/* 快递方式 */
+
+.way-select {
+  width: 6rem;
+  height: .8rem;
+  margin: .1rem 0;
+  margin-left: .75rem;
+  line-height: .8rem;
+  text-align: center;
+  border-radius: .13rem;
+  background-color: var(--theme-font-color);
+}

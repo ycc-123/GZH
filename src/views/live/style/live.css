@@ -1,0 +1,86 @@
+
+.livelive{
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 1.28rem);
+    background-color: var(--bg-color);
+}
+
+
+/* .zhibo{
+    height: 100vh;
+
+} */
+
+.prism-player{
+    display: flex;
+    position: relative;
+    left: 0;
+    top: 0;
+}
+
+
+.prism-player video {
+    flex: 1;
+}
+
+
+
+
+/*-----*/
+
+
+.pingtuan{
+    height: auto;
+    flex-direction: column;
+}
+.danmai{
+    flex-direction: column;
+
+}
+.goGroup {
+    width: 1.71rem;
+    padding: .1rem 0;
+    background: rgba(220, 28, 28, 1);
+    border-radius: .4rem;
+    color: white;
+    text-align: center;
+}
+.haomangroup{
+    color: black;
+}
+
+/*dianzang*/
+/*.goodsCartNum{*/
+/*    position:fixed;*/
+/*    left: calc((100vw - 4rem) / 2);*/
+/*    bottom:1rem;*/
+/*    border: red solid .027rem;*/
+/*    width: 4rem;*/
+/*    height: 1rem;*/
+/*    border-radius: .5rem;*/
+/*    text-align: center;*/
+/*}*/
+
+/*.jiesuan{*/
+/*    position: relative;*/
+/*    top: .3rem;*/
+/*    color:black;*/
+/*    margin-left: .2rem;*/
+/*}*/
+
+.prism-big-play-btn{
+    top:40vh;
+    margin-left: 35vw;
+}
+
+
+
+
+
+
+
+
+
+
+

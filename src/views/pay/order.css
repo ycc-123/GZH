@@ -1,0 +1,46 @@
+.pay-order-info {
+  width: 7.84rem;
+  border-radius: .13rem;
+  background-color: #fff;
+}
+
+.pay-order-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 .4rem;
+  height: 1.17rem;
+  font-size: .4rem;
+  color: var(--common-font-color);
+  border-bottom: 1px solid rgba(0, 0, 0, .1);
+}
+
+.pay-order-title-img {
+  width: .53rem;
+  height: .53rem;
+}
+
+.pay-order-info-content {
+  padding: 0 .4rem;
+}
+
+.pay-order-info-li {
+  padding: .4rem 0 ;
+  border-bottom: 1px solid rgba(0, 0, 0, .1);
+}
+
+.pay-order-info-li p:first-child {
+  margin-bottom: .4rem;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+  font-size: .35rem;
+  color: var(--common-font-color);
+}
+
+.pay-order-info-li p:not(:first-child) {
+  font-size: .32rem;
+  font-weight: 500;
+  color: var(--common-font-color);
+  opacity: .5;
+}

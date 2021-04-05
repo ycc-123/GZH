@@ -1,0 +1,318 @@
+/* head 样式开始 */
+
+.home-sign {
+  width: 7rem;
+  height: auto;
+}
+
+.home-cha {
+  display: block;
+  margin: 0 auto;
+  width: .8rem;
+  height: .8rem;
+} 
+
+.home { 
+  height: calc((100vh) - env(safe-area-inset-bottom));
+  background: var(--bg-color);
+}
+
+.home-header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  width: 100%;
+  height: 1.2rem;
+  padding: 0 .32rem;
+  font-size: .66rem;
+  color: white;
+  overflow: hidden;
+}
+
+.location {
+  position: absolute;
+  /* opacity: 0; */
+  overflow: hidden;
+  transition: all 1s;
+  height: 0;
+  top: 50px;
+  z-index: 0;
+}
+
+.show {
+  /* opacity: 1; */
+  overflow: visible;
+  height: 400px;
+}
+
+.location::before {
+  content: '';
+  width: 0;
+  height: 0;
+  line-height: 0;
+  font-size: 0;
+  border: 10px solid transparent;
+  border-bottom-color: skyblue;
+  position: absolute;
+  z-index: 9999;
+  top: -18px;
+  left: 12px;
+}
+
+.location li {
+  color: red;
+  width: 2rem;
+  height: .8rem;
+  background: skyblue;
+  color: transparent;
+}
+
+.img1 {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  display: block;
+  width: .6rem;
+}
+
+.img2 {
+  position: absolute;
+  right: .72rem;
+  top: 50%;
+  transform: translate(0, -50%);
+  width: .5rem;
+  height: auto;
+}
+
+.home-header .div {
+  display: inline-block;
+  width: 3.23rem;
+  padding-left: .95rem;
+  word-wrap: break-word;  
+  text-overflow: -o-ellipsis-lastline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.home-header .search {
+  position: absolute;
+  right: .32rem;
+  top: 50%;
+  transform: translate(0, -50%);
+  display: inline-block;
+  outline-style: none;
+  padding-left: .4rem;
+  background: white;
+  height: .8rem;
+  width: 6rem;
+  border: 0;
+  border-radius: .4rem;
+  font-size: .32rem;
+}
+
+/* tab-bar 样式开始 */
+
+
+
+/* tab-bar 样式结束 */
+
+/* 首页轮播图 */
+
+.Swiper {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  padding: 0 .32rem;
+}
+
+.Swiper .swiper-container {
+  border-radius: .2rem;
+  width: 100%;
+  height: 100%;
+  margin: 0px auto;
+}
+
+.Swiper .swiper-pagination {
+  background: transparent;
+}
+
+.Swiper .swiper-pagination-bullet {
+  width: .6rem;
+  height: .1rem;
+  border-radius: .08rem;
+  background: #8c8582;
+}
+
+.Swiper .swiper-pagination-bullet-active {
+  background: white;
+  opacity: 1;
+}
+
+.Swiper .swiper-slide {
+  overflow: hidden;
+}
+
+.Swiper .banner-img {
+  display: block;
+  width: 9.46rem;
+  height: auto;
+}
+
+/* 首页轮播结束 */
+
+/* 首页Icon样式 */
+
+.icons {
+  overflow: hidden;
+  width: 100%;
+  margin-top: .16rem;
+}
+
+.icons .swiper-container {
+  height: 100%;
+}
+
+.home-icon {
+  position: relative;
+  float: left;
+  width: 25%; 
+}
+
+.icon-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: .4rem;
+  vertical-align: middle;
+}
+
+.icon-img img {
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 50%;
+}
+
+.icon-desc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-wrap: wrap;
+  color: var(--font-color);
+  font-size: .32rem;
+  height: .8rem;
+}
+
+.icons .swiper-scrollbar {
+  background: white;
+  width: 1rem;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.icons .swiper-scrollbar-drag {
+  background: var(--theme-font-color);
+}
+
+/* 首页Icon结束 */
+
+/* 首页通告 */
+
+.notice {
+  position: relative;
+  z-index: 99;
+  overflow: hidden;
+  width: 100%;
+  height: 1.22rem;
+  margin-top: 1px;
+  padding-left: .32rem;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  box-sizing: border-box;
+  color: white;
+  font-size: .3rem;
+}
+
+.notice-swiper {
+  float: left;
+  height: 1.22rem;
+  line-height: 1.22rem !important;
+  padding-left: .2rem;
+  font-size: .4rem;
+}
+
+.notice-img {
+  position: relative;
+  float: left;
+  width: 15%;
+  height: 100%;
+}
+
+.notice-img img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: .7rem;
+  height: .7rem;
+}
+
+.notice .swiper-slide {
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+  width: 7.5rem;
+  font-size: .32rem;
+  z-index: 2;
+  color: var(--font-color);
+}
+
+.top-tip {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  color: red;
+  font-size: 1rem;
+}
+
+.bottom-tip {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 1.06rem;
+  color: #fff;
+}
+
+.bottom-tip img {
+  width: .53rem;
+  height: auto;
+  margin-right: .2rem;
+  animation: loading 1s linear infinite;
+}
+
+.home-live {
+  width: 100%;
+  /*height: 5rem;*/
+  padding: 0 .32rem;
+}
+
+.home-live-cover {
+  position: relative;
+  margin-top: .16rem;
+  width: 100%;
+  height: 100%;
+}

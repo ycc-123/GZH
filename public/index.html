@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+
+<head>
+  <title></title>
+  <meta charset="utf-8" />
+  <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+  <meta name="viewport"
+    content="width=device-width,initial-scale=1.0,maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <meta name="theme-color" content="#000000" />
+  <!-- <meta name="viewport" id="viewportMeta"> -->
+  <meta name="description" content="Web site created using create-react-app" />
+  <link rel="stylesheet" href="//g.alicdn.com/de/prismplayer/2.9.2/skins/default/aliplayer-min.css" />
+  <link rel="stylesheet" href="https://g.alicdn.com/de/prismplayer/2.9.2/skins/default/aliplayer-min.css" />
+  <!--  <script src="https://g.alicdn.com/de/prismplayer/2.7.2/aliplayer-min.js"></script>
+  <script src="https://g.alicdn.com/de/prismplayer/2.7.2/aliplayer-h5-min.js"></script> -->
+
+  <!-- <script src="https://g.alicdn.com/de/prismplayer/2.9.2/aliplayer-min.js"></script> -->
+  <script src="https://g.alicdn.com/de/prismplayer/2.9.2/aliplayer-min.js"></script>
+  <!-- <script src="https://as.alipayobjects.com/g/component/fastclick/1.0.6/fastclick.js"></script> -->
+  <script src="https://res.wx.qq.com/open/js/jweixin-1.6.0.js"></script>
+  <!-- <script type="text/javascript"
+    src='https://webapi.amap.com/maps?v=1.4.15&key=41ed2179e345522ddf39ba3a7fb88b7c'></script> -->
+  <script type="text/javascript"
+    src='//webapi.amap.com/maps?v=1.4.15&key=41ed2179e345522ddf39ba3a7fb88b7c&plugin=AMap.ToolBar,AMap.Autocomplete'></script>
+  <script src=" //webapi.amap.com/ui/1.1/main.js?v=1.1.1"></script>
+  <!-- <meta name="viewport" id="viewportMeta"> -->
+</head>
+
+<body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root"></div>
+  <div id="modal"></div>
+  <script>
+      // var initViewport = function (height) {
+      //   var metaEl = document.querySelector("#viewportMeta");
+      //   var content = "height=" + height + ",width=device-width,initial-scale=1.0,user-scalable=no";
+      //   metaEl.setAttribute('name', 'viewport');
+      //   metaEl.setAttribute('content', content);
+      // }
+      // var realHeight = window.innerWidth > window.innerHeight ? window.innerWidth : window.innerHeight
+      // initViewport(realHeight);
+
+      (function () {
+
+        if (typeof WeixinJSBridge == "object" && typeof WeixinJSBridge.invoke == "function") {
+          handleFontSize();
+        } else {
+          if (document.addEventListener) {
+            document.addEventListener("WeixinJSBridgeReady", handleFontSize, false);
+          } else if (document.attachEvent) {
+            document.attachEvent("WeixinJSBridgeReady", handleFontSize);
+            document.attachEvent("onWeixinJSBridgeReady", handleFontSize);
+          }
+        }
+        function handleFontSize() {
+          // 设置网页字体为默认大小
+          WeixinJSBridge.invoke('setFontSizeCallback', { 'fontSize': 0 });
+          // 重写设置网页字体大小的事件
+          WeixinJSBridge.on('menu:setfont', function () {
+            WeixinJSBridge.invoke('setFontSizeCallback', { 'fontSize': 0 });
+          });
+        }
+      })();
+
+    // document.body.addEventListener('touchmove', function (ev) {
+    //   ev.preventDefault();
+    // }, { passive: false });
+
+    function navigateToMiniProgram(payParam) {
+      let nowHash = window.location.hash
+      let successurl = window.location.href.replace(nowHash, '')
+      const { total_fee, uniacid, id, baseUrl = window.location.origin + '/', type, openid, groupID, orderno } = payParam
+      let url
+      switch (type) {
+        case 'balance':
+          url = `/pages/pay/pay?total_fee=${encodeURIComponent(total_fee)}&openid=${openid}&id=${encodeURIComponent(id)}&baseUrl=${encodeURIComponent(baseUrl)}&uniacid=${encodeURIComponent(uniacid)}&type=${encodeURIComponent(type)}&successurl=${encodeURIComponent(successurl)}`
+          wx.miniProgram.navigateTo({
+            url
+          })
+          break;
+        case 'payGoods':
+          url = `/pages/pay/pay?total_fee=${encodeURIComponent(total_fee)}&groupid=${encodeURIComponent(groupID)}&type=${encodeURIComponent(type)}&baseUrl=${encodeURIComponent(baseUrl)}&uniacid=${encodeURIComponent(uniacid)}&orderno=${encodeURIComponent(orderno)}&successurl=${encodeURIComponent(successurl)}`
+          wx.miniProgram.navigateTo({
+            url
+          })
+          break;
+        case 'payVipPackage':
+          console.log('123')
+          url = `/pages/pay/pay?openid=${openid}&id=${encodeURIComponent(id)}&baseUrl=${encodeURIComponent(baseUrl)}&uniacid=${encodeURIComponent(uniacid)}&type=${encodeURIComponent(type)}&successurl=${encodeURIComponent(window.location.href)}`
+          wx.miniProgram.navigateTo({
+            url
+          })
+          break;
+        default: console.log(123)
+      }
+      // if (payParam.type === 'balance') {
+      //   // 会员余额充值
+      //   const { total_fee, uniacid, id, baseUrl, type, openid } = payParam
+      //   let url = `/pages/pay/pay?total_fee=${encodeURIComponent(total_fee)}&openid=${openid}&id=${encodeURIComponent(id)}&baseUrl=${encodeURIComponent(baseUrl)}&uniacid=${encodeURIComponent(uniacid)}&type=${encodeURIComponent(type)}&successurl=${encodeURIComponent(successurl)}`
+      //   wx.miniProgram.navigateTo({
+      //     url: url
+      //   });
+      // } else {
+      //   // 商品购买
+      //   const { total_fee, uniacid, orderno, baseUrl, groupID } = payParam
+      // let url = `/pages/pay/pay?total_fee=${encodeURIComponent(total_fee)}&groupid=${encodeURIComponent(groupID)}&baseUrl=${encodeURIComponent(baseUrl)}&uniacid=${encodeURIComponent(uniacid)}&orderno=${encodeURIComponent(orderno)}&successurl=${encodeURIComponent(successurl)}`
+      // wx.miniProgram.navigateTo({
+      //   url: url
+      // })
+      // }
+    }
+
+    function navigateToWebWiew(replaceHash) {
+      console.log(replaceHash, 'replaceHash的值')
+      // 实现小程序返回
+      let nowHash = window.location.hash
+      let webwiewUrl = window.location.href.replace(nowHash, replaceHash)
+      let navigationUrl = '/pages/webwiew/webwiew?'
+      switch (replaceHash) {
+        case '#/home':
+          navigationUrl = '/pages/home/home?'
+          console.log(replaceHash, '#/home的值')
+          break;
+        default:
+          navigationUrl = '/pages/webwiew/webwiew?'
+          console.log(replaceHash, '除了#home的值')
+          break;
+      }
+      wx.miniProgram.navigateTo({
+        url: `${navigationUrl}url=${encodeURIComponent(webwiewUrl)}`
+      })
+
+    }
+
+    function navigateGoBack() {
+      wx.miniProgram.navigateBack({})
+    }
+
+    function sendMessageToApplet(data) {
+      /*
+      *   data: is object
+      */
+      wx.miniProgram.postMessage(data)
+    }
+  </script>
+
+</body>
+
+</html>

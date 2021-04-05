@@ -1,0 +1,49 @@
+.location-box {
+  position: absolute;
+  z-index: 500;
+  bottom: 0;
+  left: .32rem;
+  height: 7.13rem;
+  width: 9.36rem;
+  border-top-left-radius: .13rem;
+  border-top-right-radius: .13rem;
+  background-color: #fff;
+}
+
+.location-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: .4rem;
+}
+
+.address-li {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  height: 1.55rem;
+  padding: 0 .4rem;
+  border-bottom: 1px solid #ccc;
+}
+
+.location_-___--___---__ {
+  display: block;
+  width: 8.56rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* .amap-ui-misc-positionpicker {
+  top: 20% !important;
+} */
+
+.amap-copyright {
+  display: none !important;
+}
+
+.amap-control {
+  display: none !important;
+}

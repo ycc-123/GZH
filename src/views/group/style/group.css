@@ -1,0 +1,121 @@
+
+/* 商品信息开始 */
+
+.group {
+  background-color: #fff;
+} 
+.sc-Axmtr .hySiBD{
+  padding: 0 .32rem;
+}
+
+
+/* 新专团 */
+
+
+.new-user-box {
+  padding-top: 1.53rem;
+  width: 7.4rem;
+  height: 4.77rem;
+  background-color: #fff;
+  border-radius: .13rem;
+}
+
+
+.new-user-__-1, .new-user-__-2 {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+.new-user-__-2 {
+  width: 1.9rem;
+  height: 1.9rem;
+  background-color: var(--theme-font-color);
+}
+
+.new-user-box img {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1.17rem;
+  height: 1.09rem;
+}
+
+.new-user-box button {
+  position: absolute;
+  bottom: .4rem;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 3.11rem;
+  height: .95rem;
+  line-height: .95rem;
+  color: var(--common-font-color);
+  font-size: .4rem;
+  font-weight: 500;
+  border: 1px solid #E6E6E6;
+  border-radius: .47rem;
+}
+
+.new-user-box p {
+  text-align: center;
+  color: var(--common-font-color);
+}
+
+.new-user-__-3 {
+  font-size: .4rem;
+}
+
+.new-user-__-4 {
+  margin-top: .4rem;
+  font-size: .32rem
+}
+
+
+/* 详情页推荐 */
+
+
+/* 详情页底部 */
+
+
+.detail-bottom-icon:nth-child(2) img {
+  top: 15%;
+  
+}
+
+.detail-bottom-icon span {
+  position: absolute;
+  top: 60%;
+  width: 100%;
+  text-align: justify;
+  font-size: .25rem;
+  color: var(--font-color);
+}
+
+
+.detail-bottom-button span {
+  font-size: .35rem;
+}
+
+.detail-bottom-bar .detail-total-price {
+  float: right;
+  padding-right: .4rem;
+  height: 100%;
+  border: none;
+  letter-spacing: .03rem;
+  color: #fff;
+  font-size: .4rem;
+  background: #10131a !important;
+}
+
+.mendianxinxiimg{
+  width: 0.33rem;
+  height: 0.33rem;
+  background: white;
+  margin-left: 0.35rem;
+}

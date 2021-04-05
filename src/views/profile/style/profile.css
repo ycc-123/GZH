@@ -1,0 +1,22 @@
+
+
+
+.profile{
+  height: 100vh;
+  background-color: var(--bg-color);
+}
+
+
+.profile-commander{
+  height: 3.16rem;
+  width: 100%;
+  background-color: white;
+  margin-top: .32rem;
+  border-radius: .133rem;
+}
+
+
+
+
+
+

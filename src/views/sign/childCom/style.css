@@ -1,0 +1,71 @@
+.sign-i {
+  width: 7.25rem;
+  height: auto;
+}
+
+.sign-cha {
+  display: block;
+  margin: .4rem auto 0;
+  width:  .71rem;
+  height: .71rem;
+}
+
+.sign-share {
+  position: absolute;
+  z-index: 10000;
+  top: .32rem;
+  right: .32rem;
+  width: .8rem;
+  height: auto;
+}
+
+.sign-info {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+
+.sign-info-p-first {
+  font-size: .45rem;
+  font-weight: bold;
+  color: #2A2A2A;
+}
+
+.sign-info-span-first {
+  color: #FF790C;
+  font-size: .64rem;
+}
+
+.sign-info-p-last {
+  margin-top: .45rem;
+  font-size: .38rem;
+  color: #8C8C8C;
+}
+
+.sign-info-span-last {
+  margin-top: .45rem;
+  font-size: .35rem;
+  color: #FF790C;
+}
+
+.sign-info-p-first,
+.sign-info-p-last {
+  text-align: center;
+  letter-spacing: .08rem;
+}
+
+.sign-integral-btn {
+  position: absolute;
+  bottom: 20%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 3.41rem;
+  height: .85rem;
+  border-radius: .43rem;
+  background: linear-gradient(0deg, #FEB71F 0%, #FCDB70 100%);
+  color: #D31112;
+  font-size: .29rem;
+  font-weight: 800;
+}

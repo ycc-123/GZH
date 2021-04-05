@@ -1,0 +1,33 @@
+.home-loadingBg {
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 9999 !important;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--loading-color);
+}
+
+.home-loading-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1rem;
+  height: 1rem;
+}
+
+.home-loading-img img {
+  width: 1rem;
+  height: 1rem;
+  animation: loading 1s linear infinite;
+}
+
+.home-loading-img p {
+  color: var(--font-color);
+  font-size: .32rem;
+}
